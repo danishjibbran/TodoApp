@@ -1,0 +1,33 @@
+<div class="mb-1 mt-1">
+  @if (loading) {
+    <mat-progress-bar mode="buffer"></mat-progress-bar>
+  }
+</div>
+<h3 class="mb-1">List of Tasks:</h3>
+<div class="gap-1 row d-grid todo-list-container px-3">
+  @for (todo of todos; track todo.id) {
+    <mat-card class="mb-1" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title>Task</mat-card-title>
+        <mat-card-subtitle>{{ todo.name }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="todo-description">
+          {{ todo.description }}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <div class="d-flex gap-2">
+          <button class="ml-auto" matMiniFab aria-label="Example icon button with a delete icon" (click)="deleteTodo(todo.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+          <button class="ml-auto" matMiniFab aria-label="Example icon button with a delete icon" (click)="editTodo(todo.id)">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  } @empty {
+    <p>No tasks found.</p>
+  }
+</div>

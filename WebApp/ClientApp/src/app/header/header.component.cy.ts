@@ -1,0 +1,4 @@
+describe('HeaderComponent', () => {
+  beforeEach(async () => {
+  });
+});

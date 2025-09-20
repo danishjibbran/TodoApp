@@ -1,0 +1,12 @@
+<mat-toolbar>
+  <span>Todo App</span>
+  <span class="example-spacer"></span>
+  <button matIconButton class="example-icon favorite-icon" aria-label="Add new task"
+          (click)="navigateTo(['todo','add'])">
+    <mat-icon>add_task</mat-icon>
+  </button>
+  <button matIconButton class="example-icon" aria-label="View tasks"
+          (click)="navigateTo(['/'])">
+    <mat-icon>task</mat-icon>
+  </button>
+</mat-toolbar>

@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css";
+@import "../node_modules/@fortawesome/fontawesome-free/css/brands.min.css";
+@import "../node_modules/@fortawesome/fontawesome-free/css/solid.min.css";
+
+@import './styles/base.scss';
+@import './styles/components.scss';
+@import './styles/utilities.scss';
+
+.ml-auto {
+  margin-left: auto;
+}
+
+html, body {
+  height: 100%;
+}
+
+.h-10 {
+  height: 10%;
+}
+
+.h-80 {
+  height: 80%;
+}
+
+.todo-description {
+  word-break: break-all;
+}
+
+.todo-list-container {
+  grid-template-columns: auto auto;
+}
+
+@media only screen and (max-width: 368px) {
+  .todo-list-container {
+    grid-template-columns: auto;
+  }
+}
+
+.footer-note {
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

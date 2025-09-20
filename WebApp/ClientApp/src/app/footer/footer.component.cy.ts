@@ -1,0 +1,4 @@
+describe('FooterComponent', () => {
+  beforeEach(async () => {
+  });
+});

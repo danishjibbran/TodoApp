@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\MyMessaging.DomainObjects\Todo.DomainObjects.csproj" />
+        <ProjectReference Include="..\MyMessaging.Repositories\Todo.Repositories.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FluentValidation" Version="12.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.5" />
+        <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="9.0.5" />
+        <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.0" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+        <PackageReference Include="NSubstitute" Version="5.3.0" />
+        <PackageReference Include="Stubble.Core" Version="1.10.8" />
+        <PackageReference Include="System.Drawing.Common" Version="9.0.5" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.app" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="MachineLearningModels\mail_spam.csv" />
+      <None Remove="MachineLearningModels\mail_spam.zip" />
+      <None Remove="MachineLearningModels\toxic_messages.zip" />
+      <None Remove="EmailTemplates\UserRegistrationEmail.html" />
+      <None Remove="EmailTemplates\UserRegistrationApprovalEmail.html" />
+      <None Remove="EmailTemplates\UserSignupEmail.html" />
+    </ItemGroup>
+
+</Project>

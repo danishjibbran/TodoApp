@@ -1,0 +1,25 @@
+<div class="d-flex justify-content-center">
+  <div class="p-2 d-flex flex-column col-sm-12 col-md-6 col-lg-6 col-xl-6" *ngIf="formGroup" [formGroup]="formGroup">
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name">
+      @if (formGroup.controls.name.invalid) {
+        <mat-error>Name is required</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName="description"></textarea>
+      @if (formGroup.controls.description.invalid) {
+        <mat-error>Description is required</mat-error>
+      }
+    </mat-form-field>
+
+    <div class="d-flex justify-content-end">
+      <button [disabled]="!formGroup.valid" matFab extended (click)="add()">
+        <mat-icon>save</mat-icon>
+        Save
+      </button>
+    </div>
+  </div>
+</div>
